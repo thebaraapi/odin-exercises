@@ -20,17 +20,17 @@ function getComputerChoice() {
   return choices[random];
 }
 
-function getRoundWinner(playerChoice, computerChoice) {
+function updateRoundWinner(playerChoice, computerChoice) {
   if (playerChoice === computerChoice) {
-    return ++tieCount;
+    tieCount++;
   } else if (
     (playerChoice === "rock" && computerChoice === "scissors") ||
     (playerChoice === "scissors" && computerChoice === "paper") ||
     (playerChoice === "paper" && computerChoice === "rock")
   ) {
-    return ++userCurrentScore;
+    userCurrentScore++;
   } else {
-    return ++computerCurrentScore;
+    computerCurrentScore++;
   }
 }
 
@@ -47,12 +47,12 @@ function getWinner() {
 function playRound(e) {
   if (e.target.tagName === "BUTTON") {
     currentRound++;
-    round.textContent = `Round: ${currentRound}`;
     currentPlayerChoice = e.target.textContent;
     currentComputerChoice = getComputerChoice();
+    round.textContent = `Round: ${currentRound}`;
     playerChoice.textContent = currentPlayerChoice;
     computerChoice.textContent = currentComputerChoice;
-    getRoundWinner(currentPlayerChoice, currentComputerChoice);
+    updateRoundWinner(currentPlayerChoice, currentComputerChoice);
     userScore.textContent = `User: ${userCurrentScore}`;
     computerScore.textContent = `Computer: ${computerCurrentScore}`;
     currentTie.textContent = `Tie: ${tieCount}`;
