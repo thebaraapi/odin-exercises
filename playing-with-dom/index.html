@@ -3,19 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Rock Paper Scissors</title>
   </head>
   <body>
-    <div class="container">
-      <h1 id="main-heading">favourite movie franchise</h1>
-      <ul>
-        <li class="list-items1">The Matrix</li>
-        <li class="list-items">Star Wars</li>
-        <li class="list-items">Harry Potter</li>
-        <li class="list-items">LOTR</li>
-        <li class="list-items">Marvel</li>
-      </ul>
-      <span>Hello</span>
+    <div class="player-selection">
+      <div class="match">
+        <div class="current-round">Round:</div>
+        <span class="display-player-choice"></span>
+        <span>vs</span>
+        <span class="display-computer-choice"></span>
+      </div>
+
+      <button class="rock">rock</button>
+      <button class="paper">paper</button>
+      <button class="scissors">scissors</button>
+
+      <div class="result">
+        <span class="user-current-score"> User: </span>
+        <span class="computer-current-score">Cumputer: </span>
+        <span class="tie-count">Tie: </span>
+        <div class="the-winner"></div>
+      </div>
     </div>
 
     <script src="script.js"></script>
