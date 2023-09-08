@@ -1,0 +1,55 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+.player-selection {
+  margin: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.match {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.current-round {
+  margin-right: 10px;
+}
+
+.display-player-choice,
+.display-computer-choice {
+  font-weight: bold;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.result {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.user-current-score,
+.computer-current-score,
+.tie-count {
+  margin-right: 10px;
+}
+
+.the-winner {
+  margin-top: 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
