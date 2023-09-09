@@ -60,13 +60,7 @@ function playRound(e) {
   if (currentRound === 5) {
     const theWinner = getWinner();
     announcement.textContent = `Game Over!, ${theWinner}`;
-    announcement.disabled = true;
-
-    const buttons = playerSelection.querySelectorAll("button");
-    buttons.forEach((button) => {
-      button.disabled = true;
-    });
-    playerSelection.disabled = true;
+    playerSelection.removeEventListener("click", playRound);
   }
 }
 
