@@ -8,8 +8,19 @@
   <body>
     <div class="grandparent">
       <div class="parent">
-        <div class="child"></div>
+        <button class="child"></button>
       </div>
     </div>
   </body>
+  <script>
+    const grandparent = document.querySelector(".grandparent");
+
+    grandparent.addEventListener("click", (e) => {
+      if (e.target.tagName === "BUTTON") {
+        event.target.addEventListener("click", function () {
+          console.log("this is clicked");
+        });
+      }
+    });
+  </script>
 </html>

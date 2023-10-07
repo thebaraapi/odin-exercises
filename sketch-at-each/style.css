@@ -1,0 +1,21 @@
+.grid-container {
+  display: grid;
+  gap: 2px; /* Adjust the gap between grid cells */
+  width: 500px; /* Adjust the container width as needed */
+  height: 500px; /* Adjust the container height as needed */
+  margin: 0 auto; /* Center the grid container */
+  border: 1px solid #000; /* Add a border for better visualization */
+}
+#wide16 {
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(16, 1fr);
+}
+#wide32 {
+  grid-template-columns: repeat(32, 1fr);
+  grid-template-rows: repeat(32, 1fr);
+}
+.boxes {
+  width: 100%; /* Each cell takes up the entire column width */
+  height: 100%; /* Each cell takes up the entire row height */
+  background-color: #ccc; /* Set the background color of the cells */
+}
